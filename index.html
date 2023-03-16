@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,6 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="assets/style.css">
-    <style>
-        label.required:after {
-            content: " *";
-            color: red;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -42,7 +36,9 @@
                                 webu pro pozdější zkoumání. Uložíme DNS záznamy pro danou doménu a IP adresy cílového
                                 webserveru. Nakonec předáme informaci o potenciálním phishingu na potřebná místa.</p>
                             <p>Pokud máte zájem o přístup k námi sbíraným datům, <a href="mailto:marek.susicky@sec4good.cz">napište</a>.</p>
-                            <form action="https://data.phishingalert.cz" method="POST" class="requires-validation"
+                            <!-- <form action="https://data.phishingalert.cz" method="POST" class="requires-validation"
+                                  novalidate> -->
+                            <form action="http://127.0.0.1:5000" method="POST" class="requires-validation"
                                   novalidate>
                                 <h3>Informace o Vás - na e-mail přijde potvrzení</h3>
                                 <br>
@@ -50,12 +46,12 @@
                                     <div class="col-md-6 mb-3">
                                         <i class="fas fa-info-circle fa-inverse" data-toggle="tooltip" data-placement="auto" data-html="true" title="Vaše jméno - nebude nikde figurovat"></i>
                                         <label for="name" class="form-label">Vaše jméno</label>
-                                        <input type="text" class="form-control" id="name_author" name="name" maxlength="50" required>
+                                        <input type="text" class="form-control" id="name-author" name="name_author" maxlength="50" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <i class="fas fa-info-circle fa-inverse" data-toggle="tooltip" data-placement="auto" data-html="true" title="Váš e-mail, na který zašleme aktivační link, bez něhož nebo napište do poznámky"></i>
                                         <label for="email_author" class="form-label">Váš e-mail</label>
-                                        <input type="email" class="form-control" id="email_author" name="email_author" maxlength="100"
+                                        <input type="email" class="form-control" id="email-author" name="email_author" maxlength="100"
                                                required>
                                         <div class="help-block with-errors"></div>
                                     </div>
@@ -97,13 +93,13 @@
                                     <div class="mb-3">
                                         <i class="fas fa-info-circle fa-inverse" data-toggle="tooltip" data-placement="auto" data-html="true" title="Prosím, sem nakopírujte hlavičku e-mailu. Pokud nevíte, jak je získat, nevadí."></i>
                                         <label for="email-header" class="form-label">Hlavička e-mailu</label>
-                                        <textarea class="form-control" id="email-header" name="email-header"
+                                        <textarea class="form-control" id="email-header" name="email_header"
                                                   rows="6" maxlength="4000" ></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <i class="fas fa-info-circle fa-inverse" data-toggle="tooltip" data-placement="auto" data-html="true" title="Text phishingového emailu."></i>
                                         <label for="email-text" class="form-label">Text e-mailu</label>
-                                        <textarea class="form-control" id="email-text" name="email-text"
+                                        <textarea class="form-control" id="email-text" name="email_text"
                                                   rows="6"></textarea>
                                     </div>
                                 </div>
@@ -111,7 +107,7 @@
                                 <div class="mb-3">
                                     <i class="fas fa-info-circle fa-inverse" data-toggle="tooltip" data-placement="auto" data-html="true" title="Místo pro jakékoliv dodatečné informace, co se jinam nehodí."></i>
                                     <label for="note-text" class="form-label">Poznámka k hlášení</label>
-                                    <textarea class="form-control" id="note-text" name="note-text" rows="6"></textarea>
+                                    <textarea class="form-control" id="note-text" name="note_text" rows="6"></textarea>
                                 </div>
                                 <div class="mb-3 form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>

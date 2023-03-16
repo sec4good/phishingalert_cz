@@ -44,9 +44,9 @@ $(function () {
     });
 
 
-    var emailInput = document.getElementById("email_author");
+    var emailInput = document.getElementById("email-author");
 
-    authorEmailError = document.querySelector('#email_author + .help-block');
+    authorEmailError = document.querySelector('#email-author + .help-block');
 
     emailInput.addEventListener('input', function () {
         if (emailInput.value.length==0 || emailRegex.test(emailInput.value)) {

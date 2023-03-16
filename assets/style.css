@@ -175,3 +175,8 @@ h2 {
 .with-errors{
     color: #d80650;
 }
+
+label.required:after {
+    content: " *";
+    color: red;
+}
