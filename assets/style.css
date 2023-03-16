@@ -159,3 +159,19 @@ h2 {
 .valid-feedback{
    color: #2acc80;
 }
+
+.hiddenField {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.7s ease, height 0.7s ease;
+}
+
+.hiddenField.show {
+    opacity: 1;
+    height: auto;
+}
+
+.with-errors{
+    color: #d80650;
+}
