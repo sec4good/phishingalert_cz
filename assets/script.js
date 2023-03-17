@@ -44,12 +44,12 @@ $(function () {
     });
 
 
-    var emailInput = document.getElementById("email-author");
+    var emailAuthInput = document.getElementById("email-author");
 
     authorEmailError = document.querySelector('#email-author + .help-block');
 
-    emailInput.addEventListener('input', function () {
-        if (emailInput.value.length==0 || emailRegex.test(emailInput.value)) {
+    emailAuthInput.addEventListener('input', function () {
+        if (emailAuthInput.value.length==0 || emailRegex.test(emailAuthInput.value)) {
             authorEmailError.textContent = '';
         } else {
             authorEmailError.textContent = 'Zadejte platný email';
