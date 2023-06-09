@@ -38,7 +38,7 @@
                             <p>Pokud máte zájem o přístup k námi sbíraným datům, <a
                                     href="mailto:marek.susicky@sec4good.cz">napište</a>.</p>
                             <form action="https://data.phishingalert.cz" method="POST" class="requires-validation"
-                                  novalidate>
+                                  autocomplete="off" novalidate>
                                 <h3>Informace o Vás - na e-mail přijde potvrzení</h3>
                                 <br>
                                 <div class="row">
@@ -85,9 +85,9 @@
                                 </div>
                                 <div class="mb-3">
                                     <i class="fas fa-info-circle fa-inverse" data-toggle="tooltip" data-placement="auto"
-                                       data-html="true" title="Zadejte plnou adresu phishingového webu"></i>
+                                       data-html="true" title="Zadejte celou adresu phishingového webu ve formátu http(s)://"></i>
                                     <label for="website" class="form-label">WWW</label>
-                                    <input type="url" class="form-control" id="website" name="website" maxlength="80">
+                                    <input type="url" class="form-control" id="website" name="website" maxlength="80" value="https://">
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <!-- Phone related -->
@@ -166,17 +166,19 @@
 <!-- partial -->
 <!-- Matomo -->
 <script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//sec4good.cz/mtm/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '2']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+        var u = "//sec4good.cz/mtm/";
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+    })();
 </script>
 <!-- End Matomo Code -->
 <script src="assets/script.js"></script>
