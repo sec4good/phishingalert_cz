@@ -38,7 +38,7 @@
                             <p>Pokud máte zájem o přístup k námi sbíraným datům, <a
                                     href="mailto:marek.susicky@sec4good.cz">napište</a>.</p>
                             <form action="https://data.phishingalert.cz" method="POST" class="requires-validation"
-                                  autocomplete="off" novalidate>
+                                  autocomplete="false" novalidate>
                                 <h3>Informace o Vás - na e-mail přijde potvrzení</h3>
                                 <br>
                                 <div class="row">
@@ -71,7 +71,7 @@
                                            title="Zadejte e-mailovou adresu, z které Vám přišel první kontakt. Pokud jich máte více, uveďte je do poznámky, nebo pošlete další hlášení "></i>
                                         <label for="email" class="form-label">E-mail (iniciální kontakt)</label>
                                         <input type="email" class="form-control" id="email" name="email" maxlength="50"
-                                               onchange="toggleEmailInputBox()">
+                                               onchange="toggleEmailInputBox()" autocomplete="none">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="col-md-6 mb-3">
@@ -80,7 +80,7 @@
                                            title="Zadejte telefonní číslo, z kterého Vám píší, případně volají. Pokud máte čísel více, pošlete prosím více hlášení, nebo napište do poznámky"></i>
                                         <label for="phone" class="form-label">Telefon (volající-SMS-WhatsApp)</label>
                                         <input type="phone" class="form-control" id="phone" name="phone" maxlength="20"
-                                               onchange="togglePhoneInputBox()">
+                                               onchange="togglePhoneInputBox()" autocomplete="none">
                                     </div>
                                 </div>
                                 <div class="mb-3">
